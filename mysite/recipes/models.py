@@ -1,5 +1,5 @@
 from django.db import models
-from ckeditor.fields import RichTextField
+from ckeditor_uploader.fields import RichTextUploadingField
 
 
 class Recipe(models.Model):
@@ -9,7 +9,7 @@ class Recipe(models.Model):
 
     created = models.DateTimeField(verbose_name="Dátum", auto_now_add=True)
     title = models.CharField(verbose_name="Cím", max_length=1024)
-    content = RichTextField(verbose_name="Tartalom")
+    content = RichTextUploadingField(verbose_name="Tartalom")
 
     def __str__(self):
         return str(self.title) + ' - ' + self.created.strftime('%Y.%m.%d. %H:%M')

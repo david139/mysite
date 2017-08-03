@@ -21,6 +21,6 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', recipe_views.recipes, name='list_recipes'),
     url(r'^recipes$', recipe_views.recipes, name='list_recipes'),
-    url(r'^recipes/<?P<input_id>$', recipe_views.recipe, name='recipe'),
+    url(r'^recipes/(?P<input_id>/d+)$', recipe_views.recipe, name='recipe'),
     url(r'^ckeditor/', include('ckeditor_uploader.urls')),
 ]

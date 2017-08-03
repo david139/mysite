@@ -3,8 +3,11 @@
 {% block content %}
     <h1>Receptek</h1>
 
+    <ul>
         {% for recipe in recipes %}
-            <hr>
-            {% include "recipes/recipe.html" %}
+            <li>
+                <a href="recipes/{{ recipe.id }}">{{ recipe.title }}</a>
+            </li>
         {% endfor %}
+    </ul>
 {% endblock %}

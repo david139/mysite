@@ -127,6 +127,8 @@ MEDIA_URL = '/media/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATIC_URL = '/static/'
 
+CKEDITOR_UPLOAD_PATH = '/media/uploads'
+
 CKEDITOR_CONFIGS = {
     'default': {
         'language': 'hu',

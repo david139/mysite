@@ -15,9 +15,11 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
-from mysite.recipes import views as recipe_views;
+from mysite.recipes import views as recipe_views
+from ckeditor_uploader import urls as ckeditor_urls
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', recipe_views.recipes, name='list_recipes'),
+    url(r'^ckeditor/', ckeditor_urls),
 ]
